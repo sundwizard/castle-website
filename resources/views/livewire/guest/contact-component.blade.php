@@ -31,9 +31,51 @@
                         <!-- col -->
                         <div class="col-lg-6 align-self-center">
                             <!-- Contact Form -->
-                            <div class="contact-img">
+                            {{-- <div class="contact-img">
                                 <img src="{{ asset('guest/images/contact/contact_bg1.jpg') }}" class="" alt="about-img">
+                            </div> --}}
+
+                            {{-- DISPLAAYING CONTACT FORM  --}}
+                            <div class="col-lg-8">
+                                {{-- <h3 class="contact-title">Get in Touch</h3> --}}
+                                <h2 class="box-title">Let’s talk…</h2>
+                                    <p>Fill in this form and a member of our  team will contact you as soon as possible.</p>
+                                    <hr>
+                                    @if(Session::has('message'))
+                                        <div class="alert alert-success" role="alert">{{Session::get('message')}}</div>
+                                    @endif
+                                <form action="#"wire:click.prevent="sendMessage" class="contact-form">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="text" class="form-control" wire:model="name" id="nameId" name="name" placeholder="Full Name">
+                                                @error('name') <p class="text-danger">{{$message}}</p>@enderror
+                                            </div>
+                                            <!-- .form-group -->
+                                        </div>
+                                        <!-- .col-md-6 -->
+                                        <div class="col-md-6">
+                                            <div class="form-group">
+                                                <input type="email" class="form-control" wire:model="email" id="emailId" name="email" placeholder="Email Address">
+                                                @error('email') <p class="text-danger">{{$message}}</p>@enderror
+                                            </div>
+                                        </div>
+                                        <!-- .col-md-6 -->
+                                    </div>
+                                    <!-- .row -->
+                                    <div class="form-group">
+                                        <input type="number" class="form-control" wire:model="phone" id="subjectId" name="subject" placeholder="Phone">
+                                        @error('phone') <p class="text-danger">{{$message}}</p>@enderror
+                                    </div>
+                                    <textarea class="form-control text-area" wire:model="comment" rows="3" placeholder="Your Message"></textarea>
+                                    @error('comment') <p class="text-danger">{{$message}}</p>@enderror
+
+                                    <button type="submit" wire:loading.remove wire:target="sendMessage" class="btn btn-default">Send Message</button>
+                                    <button type="submit" wire:loading wire:target="sendMessage" class="btn btn-default"><x-guest-loader /></button>
+                                </form>
                             </div>
+
+
                         </div>
                         <!-- .col -->
                         <div class="col-lg-6 ps-lg-5">

@@ -1,23 +1,24 @@
 <?php
 
+use App\Models\Event;
+use App\Models\Service;
+
+
 use Illuminate\Support\Facades\Route;
+use App\Livewire\Guest\AboutComponent;
+use App\Livewire\Guest\ContactComponent;
 use App\Http\Controllers\DashboardController;
 
 
-use App\Livewire\Guest\AboutComponent;
-use App\Livewire\Guest\ContactComponent;
-use App\Livewire\Guest\Service\ServicesComponent;
-use App\Livewire\Guest\Service\ServiceDetailsComponent;
-
-
-use App\Livewire\Guest\Events\EventsComponent;
-use App\Livewire\Guest\Events\EventDetailsComponent;
-use App\Livewire\Superadmin\SuperAdminDashboardComponent;
-
 use App\Http\Middleware\SuperAdminMiddleware;
+use App\Livewire\Guest\Events\EventsComponent;
+use App\Livewire\Guest\Service\ServicesComponent;
 
-use App\Models\Service;
-use App\Models\Event;
+use App\Livewire\Guest\Events\EventDetailsComponent;
+
+use App\Livewire\Guest\Service\ServiceDetailsComponent;
+use App\Livewire\Superadmin\SuperAdminContactComponent;
+use App\Livewire\Superadmin\SuperAdminDashboardComponent;
 
 Route::get('/', function () {
     $services = Service::limit(3)->get();
@@ -40,5 +41,9 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 
     Route::middleware([SuperAdminMiddleware::class])->prefix('super-admin')->group(function(){
         Route::get('/dashboard',SuperAdminDashboardComponent::class)->name('superadmin.dashboard');
+
+        //route for contacts ,messages
+        Route::get('/vcontact',SuperAdminContactComponent::class)->name('vcontact');
+
     });
 });
