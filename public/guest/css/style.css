@@ -1325,7 +1325,7 @@ blockquote.blockquote-2 {
 .page-title-wrap {
     position: relative;
 }
-.page-title-wrap::before {
+/* .page-title-wrap::before {
     content: "";
     width: 70px;
     height: 70px;
@@ -1365,7 +1365,7 @@ blockquote.blockquote-2 {
     margin: auto;
     z-index: 1;
     border-radius: 6px;
-}
+} */
 .page-title-wrap-inner {
     padding: 64px 0 96px;
 }

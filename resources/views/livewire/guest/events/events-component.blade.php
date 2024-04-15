@@ -27,69 +27,6 @@
     <div class="content-wrapper pad-none">
         <div class="content-inner">
             <!-- Events Section -->
-            <section id="events-section" class="events-section pad-top-120 pad-bottom-70">
-                <!-- Screan Reader Text -->
-                <h2 class="screen-reader-text">Events</h2>
-                <div class="container">
-                    <!-- Row -->
-                    <div class="row">
-                        <!-- Col -->
-                        <div class="col-md-12">
-                            <!--events Main wrap-->
-                            <div class="events-main-wrapper events-grid events-style-2">
-                                <div class="row">
-                                    @if($searchBar)<x-search-bar wire:model.live="searchTerm" placeholder="Search event by title or description" />@endif
-
-                                    @if(count($events)>0)
-                                        @foreach($events as $event)
-                                        <div class="col-lg-4 col-md-6">
-                                            <!--events Inner-->
-                                            <div class="events-inner margin-bottom-30">
-                                                <!--events Thumb-->
-                                                <div class="events-thumb mb-0 relative">
-                                                    <img src="{{ asset('guest/images/uploads/'.$event->image)}}" class="img-fluid thumb w-100" width="768" height="650" alt="events-img" />
-                                                </div>
-                                                <!--events details-->
-                                                <div class="events-details pad-lr-30 pad-bottom-35">
-                                                    <div class="event-date margin-bottom-30">{{ $event->event_date->format('M Y')}}<span class="event-time">{{ $event->event_time->format('h:i A')}}</span>
-                                                    </div>
-                                                    <div class="event-title mb-3">
-                                                        <h5><a href="{{ route('events.show',[$event->event_title,$event->id])}}">{{ $event->event_title }}</a></h5>
-                                                    </div>
-                                                    <div class="read-more">
-                                                        <a href="{{ route('events.show',[$event->event_title,$event->id])}}">Event Details</a>
-                                                    </div>
-                                                </div>
-                                                <!--events details-->
-                                            </div>
-                                            <!--events Inner Ends-->
-                                        </div>
-                                        @endforeach
-                                    @else
-                                    <div class="example-alert">
-                                        <div class="alert alert-danger alert-icon" align="center">
-                                            <em class="icon ni ni-cross-circle" ></em> <strong>Sorry</strong>! No any upcoming event.
-                                        </div>
-                                    </div>
-                                    @endif
-                                </div>
-                                <!-- events Row -->
-                                <div class="col-lg-12">
-                                    <div class="post-pagination-wrap margin-top-30">
-                                        <ul class="nav pagination post-pagination justify-content-center test-pagination">
-                                            {{ $events->links() }}
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- events Main wrap Ends -->
-                        </div>
-                        <!-- Col -->
-                    </div>
-                    <!-- Row -->
-                </div>
-            </section>
-
             @if($nextEvent!=null)
             <section class="day-counter-section typo-white section-bg-img o-visible pad-top-150 pad-bottom-180" data-bg="images/bg/bg-4.jpg">
                 <span class="theme-overlay"></span>
@@ -163,6 +100,69 @@
                 </div>
             </section>
             @endif
+            <section id="events-section" class="events-section pad-top-120 pad-bottom-70">
+                <!-- Screan Reader Text -->
+                <h2 class="screen-reader-text">Events</h2>
+                <div class="container">
+                    <!-- Row -->
+                    <div class="row">
+                        <!-- Col -->
+                        <div class="col-md-12">
+                            <!--events Main wrap-->
+                            <div class="events-main-wrapper events-grid events-style-2">
+                                <div class="row">
+                                    @if($searchBar)<x-search-bar wire:model.live="searchTerm" placeholder="Search event by title or description" />@endif
+
+                                    @if(count($events)>0)
+                                        @foreach($events as $event)
+                                        <div class="col-lg-4 col-md-6">
+                                            <!--events Inner-->
+                                            <div class="events-inner margin-bottom-30">
+                                                <!--events Thumb-->
+                                                <div class="events-thumb mb-0 relative">
+                                                    <img src="{{ asset('guest/images/uploads/'.$event->image)}}" class="img-fluid thumb w-100" width="768" height="650" alt="events-img" />
+                                                </div>
+                                                <!--events details-->
+                                                <div class="events-details pad-lr-30 pad-bottom-35">
+                                                    <div class="event-date margin-bottom-30">{{ $event->event_date->format('M Y')}}<span class="event-time">{{ $event->event_time->format('h:i A')}}</span>
+                                                    </div>
+                                                    <div class="event-title mb-3">
+                                                        <h5><a href="{{ route('events.show',[$event->event_title,$event->id])}}">{{ $event->event_title }}</a></h5>
+                                                    </div>
+                                                    <div class="read-more">
+                                                        <a href="{{ route('events.show',[$event->event_title,$event->id])}}">Event Details</a>
+                                                    </div>
+                                                </div>
+                                                <!--events details-->
+                                            </div>
+                                            <!--events Inner Ends-->
+                                        </div>
+                                        @endforeach
+                                    @else
+                                    <div class="example-alert">
+                                        <div class="alert alert-danger alert-icon" align="center">
+                                            <em class="icon ni ni-cross-circle" ></em> <strong>Sorry</strong>! No any upcoming event.
+                                        </div>
+                                    </div>
+                                    @endif
+                                </div>
+                                <!-- events Row -->
+                                <div class="col-lg-12">
+                                    <div class="post-pagination-wrap margin-top-30">
+                                        <ul class="nav pagination post-pagination justify-content-center test-pagination">
+                                            {{ $events->links() }}
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- events Main wrap Ends -->
+                        </div>
+                        <!-- Col -->
+                    </div>
+                    <!-- Row -->
+                </div>
+            </section>
+
             <!-- events Section Ends -->
         </div>
     </div>
