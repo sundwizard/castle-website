@@ -10,7 +10,7 @@
                         </ul>
                         <ul class="nav mobile-header-items pull-left">
                             <li>
-                                <a href="{{ route('welcome')}}" class="img-before"><img src="{{ asset('guest/images/logo-dark.png') }}" class="img-fluid" width="149" height="45" alt="Logo"></a>
+                                <a href="{{ route('welcome')}}" class="img-before"><img width="60%" src="{{ asset('guest/images/logo-dark.png') }}" class="img-fluid" width="149" height="45" alt="Logo"></a>
                             </li>
                         </ul>
 
