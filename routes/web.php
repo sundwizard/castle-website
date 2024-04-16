@@ -16,6 +16,11 @@ use App\Livewire\Guest\Service\ServicesComponent;
 
 use App\Livewire\Guest\Events\EventDetailsComponent;
 
+use App\Livewire\Superadmin\Events\NewEventComponent;
+use App\Livewire\Superadmin\Events\EditEventComponent;
+use App\Livewire\Superadmin\Events\ViewEventComponent;
+
+
 use App\Livewire\Guest\Service\ServiceDetailsComponent;
 use App\Livewire\Superadmin\SuperAdminContactComponent;
 use App\Livewire\Superadmin\SuperAdminDashboardComponent;
@@ -44,6 +49,14 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
 
         //route for contacts ,messages
         Route::get('/vcontact',SuperAdminContactComponent::class)->name('vcontact');
+
+
+        //events routes
+        Route::get('/events/create',NewEventComponent::class)->name('events.create');
+        Route::get('/events/view',ViewEventComponent::class)->name('events.index');
+        Route::get('/events/{id}/edit',EditEventComponent::class)->name('events.edit');
+
+
 
     });
 });

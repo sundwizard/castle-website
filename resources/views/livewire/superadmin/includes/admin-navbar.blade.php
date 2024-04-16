@@ -9,6 +9,27 @@
                         <span class="nk-menu-text">Dashbaord</span>
                     </a>
                 </li><!-- .nk-menu-item -->
+
+                <li class="nk-menu-item has-sub">
+                    <a href="#" class="nk-menu-link nk-menu-toggle">
+                        <span class="nk-menu-icon"><em class="icon ni ni-activity-round-fill"></em></span>
+                        <span class="nk-menu-text">Event Management</span>
+                    </a>
+                    <ul class="nk-menu-sub" {{ $status ?? '' }}>
+                        <li class="nk-menu-item">
+                            <a href="{{ route('events.create')}}" class="nk-menu-link"><span class="nk-menu-text">Add new Event</span></a>
+                        </li>
+                        {{-- <li class="nk-menu-item">
+                            <a href="#" class="nk-menu-link"><span class="nk-menu-text">Edit Event</span></a>
+                        </li> --}}
+                        <li class="nk-menu-item">
+                            <a href="{{ route('events.index')}}" class="nk-menu-link"><span class="nk-menu-text">Manage Event</span></a>
+                        </li>
+                    </ul><!-- .nk-menu-sub -->
+                </li><!-- .nk-menu-item -->
+
+
+
                 <li class="nk-menu-item has-sub">
                     <a href="#" class="nk-menu-link nk-menu-toggle">
                         <span class="nk-menu-icon"><em class="icon ni ni-users"></em></span>
