@@ -57,15 +57,16 @@
                                             <li class="@yield('home')"><a href="{{ route('welcome')}}">Home</a></li>
                                             <li class="@yield('about')"><a href="{{ route('about')}}">About Us</a></li>
                                             <li class="@yield('services')"><a href="{{ route('services')}}">Services</a></li>
+                                            <li class="@yield('programs')"><a href="{{ route('programs')}}">Programs</a></li>
                                             <li class="@yield('events')"><a href="{{ route('events')}}">Events</a></li>
                                             <li class="@yield('contacts')"><a href="{{ route('contact')}}">Contact</a></li>
                                         </ul>
                                     </li>
                                     <!--List Item End-->
                                     <!--List Item-->
-                                    {{-- <li class="list-item">
-                                        <div class="header-navbar-text-1"><a href="{{ route('register')}}" class="h-donate-btn">Sign up</a></div>
-                                    </li> --}}
+                                    <li class="list-item">
+                                        <div class="header-navbar-text-1"><a href="#" class="h-donate-btn">Support</a></div>
+                                    </li>
                                 <!--List Item End-->
                             </ul>
                             <!-- Menu -->

@@ -6893,20 +6893,11 @@ ul.footer-bottom-items {
     padding-bottom: 0;
     padding-left: 40px;
 }
-.footer-middle-wrap .widget-title .title::after,
-.v-sticky-main-wrapper .widget-title .title::after {
-    content: "";
-    width: 1px;
-    height: 15px;
-    position: absolute;
-    bottom: -9px;
-    left: 8px;
-    top: 9px;
-}
+
 .footer-middle-wrap .widget-title .title::before,
 .v-sticky-main-wrapper .widget-title .title::before {
     content: "";
-    width: 31px;
+    width: 21px;
     height: 1px;
     position: absolute;
     bottom: 0;

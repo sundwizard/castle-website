@@ -80,8 +80,10 @@
                                 <li class="list-item">
                                     <ul class="nav navbar-main menu-dark">
                                         <li class="@yield('home')"><a href="{{ route('welcome')}}">Home</a></li>
-                                        <li class="@yield('wwa')"><a href="{{ route('welcome')}}">What we do</a></li>
-                                        <li class="@yield('wwa')"><a href="{{ route('welcome')}}">Investment</a></li>
+                                        <li class="@yield('about')"><a href="{{ route('about')}}">About Us</a></li>
+                                        <li class="@yield('services')"><a href="{{ route('services')}}">Services</a></li>
+                                        <li class="@yield('programs')"><a href="{{ route('programs')}}">Program</a></li>
+                                        <li class="@yield('events')"><a href="{{ route('events')}}">Events</a></li>
                                         <li class="@yield('contacts')"><a href="{{ route('contact')}}">Contact</a></li>
                                     </ul>
                                 </li>

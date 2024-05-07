@@ -31,13 +31,12 @@
                         <!-- col -->
                         <div class="col-lg-6 align-self-center">
                             <!-- Contact Form -->
-                            {{-- <div class="contact-img">
+                            <div class="contact-img">
                                 <img src="{{ asset('guest/images/contact/contact_bg1.jpg') }}" class="" alt="about-img">
-                            </div> --}}
+                            </div>
 
                             {{-- DISPLAAYING CONTACT FORM  --}}
-                            <div class="col-lg-8">
-                                {{-- <h3 class="contact-title">Get in Touch</h3> --}}
+                            {{-- <div class="col-lg-8">
                                 <h2 class="box-title">Let’s talk…</h2>
                                     <p>Fill in this form and a member of our  team will contact you as soon as possible.</p>
                                     <hr>
@@ -73,7 +72,7 @@
                                     <button type="submit" wire:loading.remove wire:target="sendMessage" class="btn btn-default">Send Message</button>
                                     <button type="submit" wire:loading wire:target="sendMessage" class="btn btn-default"><x-guest-loader /></button>
                                 </form>
-                            </div>
+                            </div> --}}
 
 
                         </div>
@@ -86,7 +85,7 @@
                                     <span class="border-bottom"></span>
                                 </div>
                                 <div class="margin-bottom-30">
-                                    <p class="mb-0">You can contact us on:.</p>
+                                    <p class="mb-0">You can contact us on:</p>
                                 </div>
                                 <!-- Feature List -->
                                 <div class="feature-box-wrap f-list-4">
