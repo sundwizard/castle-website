@@ -127,10 +127,10 @@
                                                     <div class="event-date margin-bottom-30">{{ $event->event_date->format('M Y')}}<span class="event-time">{{ $event->event_time->format('h:i A')}}</span>
                                                     </div>
                                                     <div class="event-title mb-3">
-                                                        <h5><a href="{{ route('events.show',[$event->event_title,$event->id])}}">{{ $event->event_title }}</a></h5>
+                                                        <h5><a href="{{ route('events.show',[$event->id])}}">{{ $event->event_title }}</a></h5>
                                                     </div>
                                                     <div class="read-more">
-                                                        <a href="{{ route('events.show',[$event->event_title,$event->id])}}">Event Details</a>
+                                                        <a href="{{ route('events.show',[$event->id])}}">Event Details</a>
                                                     </div>
                                                 </div>
                                                 <!--events details-->

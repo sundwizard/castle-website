@@ -66,7 +66,7 @@ class ServiceSeeder extends Seeder
 
         Service::create([
             'service_image' => 'capacity.jpg',
-            'service_title' => 'ORGANIZATION AND STAFF CAPACITY-BUILDING',
+            'service_title' => 'Organization and Staff Capacity-Building',
             'service_description' => "According to the United Nations, “In the global context, capacity refers to the ability of individuals and institutions to make and implement decisions and perform functions in an effective, efficient, and sustainable manner. At the individual level, capacity building refers to the process of changing attitudes and behaviors, imparting knowledge, and developing skills while maximizing the benefits of participation, knowledge exchange, and ownership. At the institutional level, capacity building focuses on the overall organizational performance and functioning capabilities, as well as the ability of an organization to adapt to change. At the systemic level, capacity building emphasizes the overall policy framework in which individuals and organizations operate and interact with the external environment.”
             At Castle Education Consult, we ensure that specific and targeted capacity-building initiatives are taken at every single level. Our capacity-building initiatives for each level are
             <ol>

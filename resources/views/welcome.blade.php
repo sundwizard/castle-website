@@ -62,7 +62,7 @@
                         data-frame_1_mask="u:t;"
                         data-frame_999="o:0;st:w;sR:4960;"
                         style="z-index:9;font-family:'Open Sans';"
-                    >A firm with a passion to re-orient the minds of students, schools, and educational administrators at all levels on progressively productive learning outcomes in Africa.
+                    >A firm with a passion to re-orient people across all fields on progressive and productive learning outcomes in Africa.
                     </rs-layer><!--
 
                     --><a
@@ -186,7 +186,7 @@
                         data-frame_999="x:left;e:power3.in;st:w;sp:1000;sR:3890;"
                         data-frame_999_reverse="x:true;"
                         style="z-index:10;font-family:'Open Sans';"
-                    >Castle Education Cosult
+                    >Castle Education Consult
                     </h1><!--
 
                     --><rs-layer
@@ -295,8 +295,8 @@ if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_s
                                     <span class="border-bottom"></span>
                                 </div>
                                 <div class="pad-top-15">
-                                    <p class="margin-bottom-20">CASTLE EDUCATION CONSULT is a firm with a passion to re-orient the minds of students, schools, and educational administrators at all levels on progressively productive learning outcomes in Africa.</p>
-                                    <p class="margin-bottom-20">We identify the challenges in Africa’s educational sector and are building capacities for a network of future leaders through innovation and creativity.</p>
+                                    <p class="margin-bottom-20">Castle Education Consult is dedicated to reorienting individuals across various fields to foster progressive and productive learning outcomes in Africa. </p>
+                                    <p class="margin-bottom-20">We are committed to identifying and addressing educational challenges while building capacities for future leaders through innovation and creativity. Our goal is to ensure that education encompasses all knowledge, skills, and experiences that contribute to a better life and society, regardless of the learning format.</p>
                                 </div>
                             </div>
 
@@ -308,7 +308,6 @@ if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_s
                 <!-- Container -->
             </section>
             <!-- About Section End -->
-
             <!-- Day Counter Section -->
             @if($nextEvent!=null)
             <section class="day-counter-section typo-white section-bg-img o-visible pad-top-150 pad-bottom-180" data-bg="images/bg/bg-4.jpg">

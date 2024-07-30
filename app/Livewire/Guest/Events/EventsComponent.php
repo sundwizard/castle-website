@@ -44,7 +44,7 @@ class EventsComponent extends Component
     public function render()
     {
         $events = $this->getEvents();
-        $nextEvent = Event::orderBy('event_date','Asc')->first();
+        $nextEvent = Event::where('event_date','>=',date('Y-m-d'))->orderby('event_date','Asc')->first();
         return view('livewire.guest.events.events-component',compact('events','nextEvent'))->layout('layouts.guest');
     }
 }

@@ -62,8 +62,8 @@
                                     <span class="border-bottom"></span>
                                 </div>
                                 <div class="pad-top-15">
-                                    <p class="margin-bottom-20">CASTLE EDUCATION CONSULT is a firm with a passion to re-orient the minds of students, schools, and educational administrators at all levels on progressively productive learning outcomes in Africa.</p>
-                                    <p class="margin-bottom-20">We identify the challenges in Africa’s educational sector and are building capacities for a network of future leaders through innovation and creativity.</p>
+                                    <p class="margin-bottom-20">Castle Education Consult is dedicated to reorienting individuals across various fields to foster progressive and productive learning outcomes in Africa.</p>
+                                    <p class="margin-bottom-20">We are committed to identifying and addressing educational challenges while building capacities for future leaders through innovation and creativity. Our goal is to ensure that education encompasses all knowledge, skills, and experiences that contribute to a better life and society, regardless of the learning format.</p>
                                 </div>
                             </div>
 
@@ -92,7 +92,7 @@
                                         <div class="feature-title">
                                             <h5 class="margin-bottom-15">Vision</h5>
                                         </div>
-                                        <p class="mb-0">Refining Education in Africa for self-development and community growth.</p>
+                                        <p class="mb-0">Redefining Education in Africa for Self-Development and Community Growth.</p>
                                     </div>
 
                                 </div>
@@ -108,7 +108,7 @@
                                         <div class="feature-title">
                                             <h5 class="margin-bottom-15">Mission</h5>
                                         </div>
-                                        <p class="mb-0">To provide innovative professional learning, development, and strategic planning to schools, communities, government, and private organizations to improve learning outcomes and productivity at all levels of business engagement. As well as work collaboratively with NGOs to carry out educational projects.</p>
+                                        <p class="mb-0">Our mission is to provide innovative learning, development, and strategic planning to individuals, schools, communities, government, and private organizations to enhance learning outcomes and productivity at all business engagement levels. We also collaborate with NGOs to implement educational projects.</p>
                                     </div>
 
                                 </div>
@@ -125,7 +125,7 @@
                                         <div class="feature-title">
                                             <h5 class="margin-bottom-15">Core Values</h5>
                                         </div>
-                                        <p class="mb-0">innovativeness, integrity, simplicity, transparency and solution-driven.
+                                        <p class="mb-0">Innovativeness, Integrity, Simplicity, Collaboration and Growth (IISCG)
                                             .</p>
                                     </div>
 

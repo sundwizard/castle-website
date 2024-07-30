@@ -12,12 +12,13 @@ class DashboardController extends Controller
     public function dashboard(){
         $role = Auth::user()->user_type;
 
+
         switch ($role) {
           case 'Super Admin':
              return redirect()->route('superadmin.dashboard');
              break;
-          case 'Investor':
-             return redirect()->route('investor.dashboard');
+          case 'Website Admin':
+             return redirect()->route('websiteadmin.dashboard');
              break;
         }
     }

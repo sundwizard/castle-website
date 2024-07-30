@@ -15,7 +15,7 @@ class ProgramSeeder extends Seeder
     {
         Program::create([
             'program_image' => 'WORKSHOP.jpg',
-            'program_title' => 'EDUCATION CONFERENCES AND WORKSHOP ',
+            'program_title' => 'Education Conferences and workshop ',
             'program_description' => "Castle Education Conferences and workshops are poised to help participants understand the advancements and new technology in the education industry. This forum grants opportunities for stakeholders to showcase their research with industry peers and reputed journals.
             <p>Our conferences and workshops will teach you how to incorporate innovations and technology into education and find new ways of learning. These skills can be used in practical settings, thus helping you gain a competitive edge.<p>
             <p>Moreover, finding mentors at these conferences is easy through networking. Learn from real-life enactments to understand personality development and critical thinking with Castle Education Conferences<p>
@@ -25,7 +25,7 @@ class ProgramSeeder extends Seeder
 
         Program::create([
             'program_image' => 'BRAINIAC.jpg',
-            'program_title' => 'CASTLE BRAINIAC ',
+            'program_title' => 'Castle Brainiac ',
             'program_description' => "Competitions play very important role in motivating student’s performance and drive for excellence in various fields.
             <p>Inter-school competitions are one of the most famous events for students in schools. At Castle Brainiac, students from different schools compete against each other in various events for the exceptionally intelligent person(s) award.<p>
             <p>Students gain substantial experience, showcase skills and enhance their personal aptitude as they participate in Castle Brainiac.<p>
@@ -54,16 +54,16 @@ class ProgramSeeder extends Seeder
 
         Program::create([
             'program_image' => 'health.jpg',
-            'program_title' => 'MENTAL HEALTH CAMPAIGN ',
+            'program_title' => 'Mental Health Campaign ',
             'program_description' => "According to the World Health Organization, Suicide is the fourth leading cause of death among young people between 15 and 29 years old. 30% of young people between 15 and 29 years have had some type of mental problem in the last year. Of all young people who noticed symptoms, only half asked for help. The most common symptoms are depression, anxiety, and sleep disorders.
             <p>Childhood and adolescence are crucial periods. Multiple physical, emotional, and social changes can make children and adolescents vulnerable to mental health problems. Education has given attention to physical and sexual health over time, yet mental health has not been systematically and consciously addressed in the classrooms.<p>
-            <p>Join us in our Mental Health Campaign for young people.<p>
+            <p> Click <a href='https://chat.whatsapp.com/Ktio00O0F8VGv3ZOLT9srO'>here</a> to join us in our Mental Health Campaign for young people.<p>
             "
         ]);
 
         Program::create([
             'program_image' => 'green.jpg',
-            'program_title' => 'GREEN-SCHOOL PROGRAM',
+            'program_title' => 'Green-school Program',
             'program_description' => "Eco-Schools Program’s mission is to provide green technology for schools that will not only benefit the environment but also enhance the overall learning experience for students and staff.
             <p>The rising concerns about climate change and the need for environmental conservation are the major drivers for our proactive steps toward sustainability. Green technology, an essential aspect of this movement, refers to the integration of eco-friendly practices and sustainable solutions in schools.<p>
             <p>The Scope of our Eco-Schools Program includes;.<p>

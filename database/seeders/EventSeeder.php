@@ -87,11 +87,13 @@ class EventSeeder extends Seeder
             </ol>
 
             <p>Our aim is not only to impart knowledge but also to inspire a collective commitment to championing the rights and potential of every learner within our community. By fostering a culture of inclusion and collaboration, we can create educational environments that celebrate diversity and empower every student to reach their full potential.</p>
+
+            Click <a href='https://chat.whatsapp.com/J6EzV8csQFq4JtsEGxXVel'>here</a> to join our whatsapp group
             ",
             "event_title" => "Special Needs Training for Teachers, Parents and School Managers",
             'type_of_event' => "Teachers Award",
             'image' => "teacher.jpg",
-            'event_date' => "2024-07-27",
+            'event_date' => "2024-06-29",
             'event_time' => "10:00",
             "event_location" => "Q 10 Quoi Street, Sabon Tasha, Kaduna State",
         ]);

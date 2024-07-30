@@ -21,6 +21,7 @@ class Event extends Model
         'event_time',
         'type_of_event',
         'event_location',
+        'event_link',
         'user_id'
     ];
 

@@ -19,12 +19,23 @@ class UserSeeder extends Seeder
     {
 
         User::create([
-            'surname' => 'Cash',
-            'othernames' => 'Rain',
-            'email' => 'info@marketwellsolutions.com',
+            'surname' => 'Castle',
+            'othernames' => 'Education Consult',
+            'email' => 'info@castleeduconsult.com.ng',
             'phoneno' => '08179333021',
-            'password' => Hash::make('Marketwell@2024'),
+            'password' => Hash::make('Castle@2024'),
             'user_type' => 'Super Admin',
+            'status' => "Active",
+            'resident_address' => "Kaduna"
+        ]);
+
+        User::create([
+            'surname' => 'Ugbon',
+            'othernames' => 'Ember',
+            'email' => 'emberugbon@gmail.com',
+            'phoneno' => '08031841291',
+            'password' => Hash::make('Luvday@1994'),
+            'user_type' => 'Website Admin',
             'status' => "Active",
             'resident_address' => "Kaduna"
         ]);

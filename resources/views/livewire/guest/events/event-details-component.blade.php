@@ -71,10 +71,10 @@
                                         </p>
                                         <p class="event-website">
                                             <span class="event-subtitle"><strong>Time : </strong></span>
-                                            {{ $event->event_time->format('m:i A')}}
+                                            {{ $event->event_time->format('h:m A')}}
                                         </p>
                                     </div>
-                                    {{-- <div class="event-contact-wrap">
+                                    <div class="event-contact-wrap">
                                         <div class="event-contact-title">
                                             <h4 class="event-form-title">Event Registration</h4>
                                         </div>
@@ -105,18 +105,29 @@
                                                             @error('phoneno') <p class="text-danger">{{$message}}</p>@enderror
                                                         </div>
                                                     </div>
-
+                                                    <div class="col-md-12">
+                                                        <div class="form-group">
+                                                            <select class="form-control" aria-label="Default select example" wire:model.live="type_of_event">
+                                                                <option selected="">How do you attending the event?</option>
+                                                                <option value="Virtual">Virtual</option>
+                                                                <option value="Physical">Physical</option>
+                                                            </select>
+                                                            @error('type_of_event')
+                                                                <p class="text-danger">{{ $message }}</p>
+                                                            @enderror
+                                                        </div>
+                                                    </div>
                                                     <div class="col-md-12">
                                                         <!-- form button -->
-                                                        <button wire:loading.remove wire:target="registerEvent" type="submit" id="contact-submit" class="btn btn-default mt-0 theme-btn">Register</button>
-                                                        <button wire:loading wire:target="registerEvent" class="btn btn-default" type="submit"><x-guest-loader /></i></button>
+                                                        <button type="submit" id="contact-submit" class="btn btn-default mt-0 theme-btn">Register</button>
+                                                        {{-- <button wire:loading wire:target="registerEvent" class="btn btn-default" type="submit"><x-guest-loader /></i></button> --}}
                                                     </div>
                                                 </div>
                                                 <span class="clearfix"></span>
                                             </form>
                                         </div>
                                         <!-- Form End-->
-                                    </div> --}}
+                                    </div>
                                     <!-- contact-form-7 -->
                                 </div>
                             </div>

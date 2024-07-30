@@ -9,7 +9,7 @@
 @if(Session::has('feedback'))
 <div class="example-alert">
     <div class="alert alert-success alert-icon">
-        <em class="icon ni ni-check-circle"></em> <strong>Success</strong>!.  {{ Session::get('feedback')}}.
+        <em class="icon ni ni-check-circle"></em> <strong>Success</strong>!  {{ Session::get('feedback')}}.
     </div>
 </div>
 @endif

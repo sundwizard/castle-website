@@ -21,10 +21,10 @@ return new class extends Migration
             $table->string('password');
             $table->string('referal_code')->nullable();
             $table->string('resident_address')->nullable();
-            $table->enum('user_type',['Super Admin','Staff','Vendor','Investor']);
+            $table->enum('user_type',['Super Admin','Website Admin']);
             $table->uuid('referer_id')->nullable();
 
-            $table->boolean('dark_mode')->default(true);
+            $table->boolean('dark_mode')->default(false);
             $table->string('profile_photo_path')->default('user.png');
             $table->enum('status',['Pending','Active','Disabled','Deleted'])->default('Pending');
             $table->timestamps();
