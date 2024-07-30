@@ -76,7 +76,7 @@ class EditServiceComponent extends Component
         $image_base64 = base64_decode($image_parts[1]);
         $postImage = Carbon::now()->timestamp.'service';//generate name for image
         $img = Image::make($image_base64)->encode('jpg', 60);
-        file_put_contents('assets/images/services/'.$postImage, $img->stream()->__toString());
+        file_put_contents('guest/images/uploads/'.$postImage, $img->stream()->__toString());
 
         return $postImage;
     }
