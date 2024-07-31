@@ -3,7 +3,7 @@
     @section('services') active @endsection
 
     <div class="page-title-wrap typo-white" wire:ignore>
-        <div class="page-title-wrap-inner section-bg-img" data-bg="{{ asset('guest/images/contact/contact_bg1.jpg') }}">
+        <div class="page-title-wrap-inner section-bg-img" data-bg="{{ asset('/guest/rs-plugin/assets/z2-slider-1.jpg') }}">
             <span class="theme-overlay"></span>
             <div class="container">
                 <div class="row text-center">

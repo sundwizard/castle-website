@@ -22,6 +22,7 @@ return new class extends Migration
             $table->string('type_of_event');
             $table->boolean('enable_voting')->default(false);
             $table->string('event_location')->nullable();
+            $table->string('event_link')->nullable();
             $table->uuid('user_id')->nullable();
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();

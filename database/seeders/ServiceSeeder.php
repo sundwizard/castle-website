@@ -64,5 +64,20 @@ class ServiceSeeder extends Seeder
             <br>In addition to giving, you a clear and objective snapshot of your school we can also provide you with practical solutions for addressing the identified weaknesses and turning them into strengths",
         ]);
 
+        Service::create([
+            'service_image' => 'capacity.jpg',
+            'service_title' => 'Organization and Staff Capacity-Building',
+            'service_description' => "According to the United Nations, “In the global context, capacity refers to the ability of individuals and institutions to make and implement decisions and perform functions in an effective, efficient, and sustainable manner. At the individual level, capacity building refers to the process of changing attitudes and behaviors, imparting knowledge, and developing skills while maximizing the benefits of participation, knowledge exchange, and ownership. At the institutional level, capacity building focuses on the overall organizational performance and functioning capabilities, as well as the ability of an organization to adapt to change. At the systemic level, capacity building emphasizes the overall policy framework in which individuals and organizations operate and interact with the external environment.”
+            At Castle Education Consult, we ensure that specific and targeted capacity-building initiatives are taken at every single level. Our capacity-building initiatives for each level are
+            <ol>
+            <li><b>INDIVIDUAL</b>: Training programs, business development activities, workshops for an in-depth discussion of specific topics; conferences.</li>
+            <li><b>INSTITUTIONAL: </b>Development of internal policies, organizational and procedural restructuring; and</li>
+
+            <li><b>SYSTEMIC: </b>Advocacy initiatives, consultations, open dialogue, and reforms.</li>
+            </ol>
+            <p>Castle Education Consult’s capacity-building team is always ready to deploy its resources to meet your organization’s needs at all three levels.</p>
+            ",
+        ]);
+
     }
 }

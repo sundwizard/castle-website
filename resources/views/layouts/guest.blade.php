@@ -110,19 +110,19 @@
                          <div class="col-lg-3 widget text-widget">
                             <div class="widget-title">
                                 <!-- Title -->
-                                <h3 class="title typo-white">About MWS </h3>
+                                <h3 class="title typo-white">About CEC </h3>
                             </div>
                             <!-- Text -->
                             <div class="widget-text margin-bottom-30">
                                 <p>CASTLE EDUCATION CONSULT is a firm with a passion to re-orient the minds of students, schools, and educational administrators at all levels on progressively productive learning outcomes in Africa.</p>
                             </div>
-                            <div class="social-icons">
+                            {{-- <div class="social-icons">
                                 <a href="#" class="social-fb"><span class="ti-facebook"></span></a>
                                 <a href="#" class="social-twitter"><span class="ti-twitter"></span></a>
                                 <a href="#" class="social-instagram"><span class="ti-instagram"></span></a>
                                 <a href="#" class="social-pinterest"><span class="ti-pinterest"></span></a>
                                 <a href="#" class="social-youtube"><span class="ti-youtube"></span></a>
-                            </div>
+                            </div> --}}
                         </div>
                         <!-- Col -->
                         <div class="col-lg-2 widget text-widget">
@@ -133,7 +133,7 @@
                             <!-- Text -->
                             <div class="menu-quick-links">
                                 <ul class="menu">
-                                    <li class="menu-item"><a href="{{ route('services')}}">We we are</a></li>
+                                    <li class="menu-item"><a href="{{ route('services')}}">What we do</a></li>
                                     <li class="menu-item"><a href="{{ route('about')}}">About</a></li>
                                     <li class="menu-item"><a href="{{ route('contact')}}">Contact</a></li>
                                     <li class="menu-item"><a href="{{ route('events')}}">Events</a></li>
