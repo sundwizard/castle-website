@@ -369,11 +369,13 @@ if(typeof revslider_showDoubleJqueryError === "undefined") {function revslider_s
                                         <!-- .counter-sec -->
                                     </div>
                                     <!-- .day-counter -->
-                                <span class="custom-heading-title relative">{{ $nextEvent->event_date->format('d M Y') }} | {{ $nextEvent->event_time->format('h:i A') }}</span>
+                                <span class="custom-heading-title relative">{{ $nextEvent->event_date->format('d M Y') }} | {{ $nextEvent->event_time->format('h:i A') }}</span><br><br>
+                                <a href="{{ route('events.show',[$nextEvent->id])}}"><button type="submit" id="contact-submit" class="btn btn-default mt-0 theme-btn">Sign Up</button></a>
                             </div>
                             <!-- .day-counter-wrapper -->
                         </div>
                     </div>
+
                 </div>
                 <div class="shape-bottom" data-negative="false">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 283.5 27.8" preserveAspectRatio="xMidYMax slice">

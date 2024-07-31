@@ -28,7 +28,7 @@
                     </a>
                 </li>
 
-                <li>
+                {{-- <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">
                         <i class="fa fa-users"></i>
                         <span>Team</span>
@@ -37,7 +37,7 @@
                         <li><a href="{{ route('teams.create')}}">Add Team Member</a></li>
                         <li><a href="{{ route('teams.index')}}">Manage Team</a></li>
                     </ul>
-                </li>
+                </li> --}}
 
                 <li>
                     <a href="javascript: void(0);" class="has-arrow waves-effect">

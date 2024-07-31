@@ -53,10 +53,10 @@ class SendNewsletterComponent extends Component
     public function updated($fields)
     {
         $this->validateOnly($fields,[
-            'title'=> ['required', 'string', 'max:255','unique:blogs,blog_title'],
+            'title'=> ['required', 'string', 'max:255'],
             'description'=> ['required', 'string'],
-            'photo' => 'required',
-            'file' => 'required',
+            // 'photo' => 'required',
+            // 'file' => 'required',
         ],$this->message);
 
         if($this->photo){
@@ -86,43 +86,53 @@ class SendNewsletterComponent extends Component
         $image_base64 = base64_decode($image_parts[1]);
         $postImage = Carbon::now()->timestamp.'newsletter.png';//generate name for image
         $img = Image::make($image_base64)->encode('jpg', 60);
-        file_put_contents('assets/images/newsletter/'.$postImage, $img->stream()->__toString());
+        file_put_contents('guest/images/uploads/'.$postImage, $img->stream()->__toString());
 
         return $postImage;
     }
 
     public function sendNewsletter($formData)
     {
+        $newsletterName = null;
+        $newsletterAttachement = null;
+
         $this->validate([
             'title'=> ['required', 'string', 'max:255'],
             'description'=> ['required', 'string'],
-            'photo' => 'required',
-            'file' => 'required',
+            // 'photo' => 'required',
+            // 'file' => 'required',
         ], $this->message);
 
-        $fileExtension = $this->photo->getClientOriginalExtension();
+        if($this->photo){
+            $fileExtension = $this->photo->getClientOriginalExtension();
 
-        if ($this->isImage($fileExtension)) {
-            $this->validate([
-                'photo' => 'required|mimes:jpeg,png,gif',
-            ],$this->message);
-        } elseif ($this->isVideo($fileExtension)) {
-            $this->validate([
-                'photo' => 'required|mimes:mp4,avi,mov|max:12000',
-            ],$this->message);
-        } else {
-            $this->message = 'Unsupported file type!';
+            if ($this->isImage($fileExtension)) {
+                $this->validate([
+                    'photo' => 'required|mimes:jpeg,png,gif',
+                ],$this->message);
+            } elseif ($this->isVideo($fileExtension)) {
+                $this->validate([
+                    'photo' => 'required|mimes:mp4,avi,mov|max:12000',
+                ],$this->message);
+            } else {
+                $this->message = 'Unsupported file type!';
+            }
+
+
+            if ($this->isImage($fileExtension)) {
+                $newsletterName  = $this->uploadProductImage($formData['croped_image']);
+            }else{
+                $newsletterName = Carbon::now()->timestamp; //generates name for the news image
+                $this->photo->storeAs('/guest/images/uploads',$newsletterName);
+            }
+
         }
 
-        if ($this->isImage($fileExtension)) {
-            $newsletterName  = $this->uploadProductImage($formData['croped_image']);
-        }else{
-            $newsletterName = Carbon::now()->timestamp; //generates name for the news image
-            $this->photo->storeAs('/newsletter',$newsletterName);
+        if($this->file){
+            $newsletterAttachement = Carbon::now()->timestamp. '.' . $this->file->getClientOriginalName();
+            $this->file->storeAs('/uploads',$newsletterAttachement);
         }
 
-        $newsletterAttachement = Carbon::now()->timestamp; //generates name for the news image
-        $this->file->storeAs('/newsletter',$newsletterAttachement);
 
         $newsletter = NewsLetter::create([
             'title' => $this->title,
@@ -142,7 +152,7 @@ class SendNewsletterComponent extends Component
                 $email = $subscribers->pluck('email')->toArray();
 
                 try{
-                    Mail::to($email)->queue(new NewsletterMail($newsletter));
+                    Mail::to($email)->send(new NewsletterMail($newsletter));
                 }catch(\Exception $e){}
             }
         }

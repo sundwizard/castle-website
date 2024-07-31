@@ -7,6 +7,7 @@ use Carbon\Carbon;
 use App\Models\Event;
 use Illuminate\Support\Facades\Auth;
 use Livewire\WithFileUploads;
+use Illuminate\Support\Str;
 use Illuminate\Support\Facades\Storage;
 use Image;
 class NewEventComponent extends Component
@@ -150,7 +151,9 @@ class NewEventComponent extends Component
             $thumbnailImage = $this->uploadProductImage($formData['croped_thumbnail']);
         }
 
+        $shortId = Str::random(6);
         $event = Event::create([
+            'id' => $shortId,
             'event_title' => $this->title,
             'description' => $this->description,
             'image' => $eventImageName,
