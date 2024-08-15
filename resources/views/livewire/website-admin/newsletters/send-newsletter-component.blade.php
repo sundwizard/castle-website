@@ -35,7 +35,7 @@
                                     @enderror
                                 </div>
                                 <div class="mb-3">
-                                    <label class="form-label">Cover Image</label>
+                                    <label class="form-label">Cover Image(Optional)</label>
                                     <div class="custom-file">
                                         <div x-data="{ isUploading: false, progress: 5 }" x-on:livewire-upload-start="isUploading = true"
                                             x-on:livewire-upload-finish="isUploading = false; progress = 5"
@@ -62,7 +62,7 @@
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
                                 </div>
-                                <div class="mb-3">
+                                {{-- <div class="mb-3">
                                     <label class="form-label">Newsletter Atachement</label>
                                     <div class="custom-file">
                                         <div x-data="{ isUploading: false, progress: 5 }" x-on:livewire-upload-start="isUploading = true"
@@ -83,7 +83,7 @@
                                     @error('file')
                                         <p class="text-danger">{{ $message }}</p>
                                     @enderror
-                                </div>
+                                </div> --}}
                                 <div class="mb-3">
                                     <label class="form-label" for="description">Description</label>
                                     <div wire:ignore>
@@ -145,7 +145,7 @@
         $(document).ready(function() {
             //start cover photo
             let cropper;
-            var finalCropWidth = 1250;
+            var finalCropWidth = 850;
             var finalCropHeight = 850;
             var finalAspectRatio = finalCropWidth / finalCropHeight;
 
@@ -184,7 +184,7 @@
             // Handle the "Crop and Upload" button click
             $('#cropImage').on('click', function(ev) {
                 var imgurl = cropper.getCroppedCanvas({
-                    width: 1250,
+                    width: 850,
                     height: 850
                 }).toDataURL();
                 $('#image_modal').modal('hide');

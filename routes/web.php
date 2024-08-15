@@ -43,6 +43,7 @@ use App\Livewire\WebsiteAdmin\Blogs\EditBlogComponent;
 use App\Livewire\WebsiteAdmin\Events\NewEventComponent;
 use App\Livewire\WebsiteAdmin\Events\WebsiteAdminEventsComponent;
 use App\Livewire\WebsiteAdmin\Events\EditEventComponent;
+use App\Livewire\WebsiteAdmin\Events\RegistrationDetails;
 
 use App\Livewire\WebsiteAdmin\Sponsors\NewSponsorComponent;
 use App\Livewire\WebsiteAdmin\Sponsors\SponsorsComponent;
@@ -111,6 +112,7 @@ Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified',])
         Route::get('/events/create',NewEventComponent::class)->name('events.create');
         Route::get('/events',WebsiteAdminEventsComponent::class)->name('events.index');
         Route::get('/events/{id}/edit',EditEventComponent::class)->name('events.edit');
+        Route::get('/events/{id}/registrations',RegistrationDetails::class)->name('events.registrations');
 
         Route::get('/sponsors/create',NewSponsorComponent::class)->name('sponsors.create');
         Route::get('/sponsors',SponsorsComponent::class)->name('sponsors.index');

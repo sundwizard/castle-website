@@ -151,7 +151,7 @@
 															<td class="pad" style="width:100%;">
 																<div class="alignment" align="center" style="line-height:10px">
                                                                     @if($newsletter->image!=null)
-																	<div style="max-width: 600px;"><img src="{{ asset('assets/images/newsletter/'.$newsletter->image) }}" alt="{{ asset('assets/images/newsletter/'.$newsletter->image) }}" style="display: block; height: auto; border: 0; width: 100%;" width="600"></div>
+																	<div style="max-width: 600px;"><img src="{{ asset('/guest/images/uploads/'.$newsletter->image) }}" alt="{{ asset('assets/images/newsletter/'.$newsletter->image) }}" style="display: block; height: auto; border: 0; width: 100%;" width="600"></div>
                                                                     @endif
                                                                     {!! $newsletter->description !!}
 																</div>

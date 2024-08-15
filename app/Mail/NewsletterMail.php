@@ -52,11 +52,9 @@ class NewsletterMail extends Mailable
      */
     public function attachments(): array
     {
+            return [
+                //Attachment::fromPath(asset('guest/images/uploads/'.$this->newsletter->file)),
+            ];
 
-        return [
-            Attachment::fromPath(asset('assets/images/newsletter/'.$this->newsletter->file))
-            ->as($this->newsletter->title.".pdf")
-            ->withMime('application/pdf'),
-        ];
     }
 }

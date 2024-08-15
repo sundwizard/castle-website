@@ -70,6 +70,7 @@
                                                             data-bs-target="#viewEvent"
                                                             wire:click="setEvent({{ $event }})"
                                                             href="#">View</a>
+                                                            <a class="dropdown-item" href="{{ route('events.registrations',$event->id)}}">View Registered users</a>
                                                         <a class="dropdown-item"
                                                             href="{{ route('events.edit', $event->id) }}">Edit</a>
                                                         <a class="dropdown-item confirm-delete"
